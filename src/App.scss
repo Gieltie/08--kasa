@@ -1,27 +1,12 @@
 @import "./styles/variables";
 @import "./styles/mixins";
 
-.wrapper {
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
   background-color: $background-color;
-  color: $text-color;
-  padding: $block-padding;
-  &__btns {
-    @include vertical-list;
-    button {
-      width: $btn-width;
-      height: $btn-height;
-    }
-  }
-}
-
-.bleu {
-  background-color: $btn-color-blue;
-}
-
-.red {
-  background-color: $btn-color-red;
-}
-
-.green {
-  background-color: $btn-color-green;
 }
