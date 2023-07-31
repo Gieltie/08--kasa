@@ -1,9 +1,10 @@
+import "../sass/Main.scss";
 import React from "react";
 
 export default function Main() {
   return (
-    <div>
+    <main className="main">
       <h3>yeah man yoyoyoyoy</h3>
-    </div>
+    </main>
   );
 }

@@ -1,9 +1,10 @@
+import "../sass/Banner.scss";
 import React from "react";
 
 export default function Banner() {
   return (
-    <div>
+    <section className="banner">
       <h2>yeah man yoyoyoyoy</h2>
-    </div>
+    </section>
   );
 }

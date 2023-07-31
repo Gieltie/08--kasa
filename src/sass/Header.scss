@@ -1,0 +1,15 @@
+@import "./styles/variables";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.25em;
+    margin: 3em 6em;
+    &--nav a {
+        color: $first-color;
+        padding-left: 2em;
+        text-decoration: none;
+        font-size: 1.5em;
+    }
+}
