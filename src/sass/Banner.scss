@@ -1,13 +1,13 @@
 @import "./styles/variables";
 
-.banner {
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../public/images/img-banner.png);
+.banner-home {
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/img-banner.png);
     background-position: center;
     border-radius: 25px;
     height: 223px;
     max-width: 1240px;
-    margin: auto;
-    margin-bottom: 3em;
+    margin: 3em 6em;
+    /* margin-bottom: 3em; */
     &--text {
         display: flex;
         justify-content: center;

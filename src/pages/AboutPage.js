@@ -1,12 +1,12 @@
 import Header from "../components/Header";
-import About from "../components/About";
+import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 
 export default function AboutPage() {
   return (
     <section>
       <Header />
-      <About />
+      <Banner />
       <Footer />
     </section>
   );

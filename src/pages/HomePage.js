@@ -1,13 +1,15 @@
 import Header from "../components/Header";
-import Home from "../components/Home";
+import Banner from "../components/Banner";
 import Footer from "../components/Footer";
+//import Gallery from "../components/Gallery";
 
 export default function HomePage() {
   return (
-    <section>
+    <div>
       <Header />
-      <Home />
+      <Banner />
+      {/* <Gallery /> */}
       <Footer />
-    </section>
+    </div>
   );
 }

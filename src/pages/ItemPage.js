@@ -1,12 +1,12 @@
 import Header from "../components/Header";
-import Item from "../components/Item";
+import Sheets from "../components/Sheets";
 import Footer from "../components/Footer";
 
 export default function ItemPage() {
   return (
     <section>
       <Header />
-      <Item />
+      <Sheets />
       <Footer />
     </section>
   );
