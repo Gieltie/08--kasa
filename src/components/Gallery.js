@@ -1,3 +1,15 @@
+import "../sass/Gallery.scss";
+import Card from "./Card";
+
 export default function Gallery() {
-  return <h1>Gallery</h1>;
+  return (
+    <main className="gallery">
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+    </main>
+  );
 }

@@ -1,0 +1,10 @@
+@import "./styles/variables";
+
+.card {
+    background: linear-gradient(180deg, rgba(255,96,96,0.9),rgba(255,96,96,1) 90%);
+    border-radius: 12px;
+    &__text {
+        color: $white;
+        align-items: baseline;
+    }
+}

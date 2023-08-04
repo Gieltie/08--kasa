@@ -1,0 +1,11 @@
+@import "./styles/variables";
+
+.gallery {
+    background-color: $second-color;
+    display: grid;
+    grid-template: 340px 340px/ 1fr 1fr 1fr;
+    margin: 3rem 6rem;
+    padding: 50px;
+    border-radius: 25px;
+    gap: 50px;
+}
