@@ -2,12 +2,12 @@
 
 .banner {
     position: relative;
-    max-width: 1240px;
+    max-width: 77.5em;
     margin: 3em 6em;
     &__img{
-        height: 223px;
+        height: 14rem;
         width: 100%;
-        border-radius: 25px;
+        border-radius: 1.5rem;
         object-fit: cover;
         filter: brightness(0.8);
     }

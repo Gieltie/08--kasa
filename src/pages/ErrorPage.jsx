@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 
 export default function ErrorPage() {
   return (
-    <section>
+    <main className="content-wrap">
       <Header />
       <Error />
       <Footer />
-    </section>
+    </main>
   );
 }

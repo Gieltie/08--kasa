@@ -4,10 +4,10 @@ import Footer from "../components/Footer";
 
 export default function ItemPage() {
   return (
-    <section>
+    <main className="content-wrap">
       <Header />
       <Sheets />
       <Footer />
-    </section>
+    </main>
   );
 }
