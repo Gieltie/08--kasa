@@ -1,10 +1,13 @@
 @import "./styles/variables";
 
 .gallery {
-    background-color: var(--second-color);
     display: grid;
-    grid-template: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+    background-color: var(--second-color);
+    gap: 3rem;
+    border-radius: 1.5rem; 
     margin: 3rem 6rem;
-    padding: 50px;
-    border-radius: 25px;
+    padding: 3rem;
+    align-items: center;
+    justify-items: center;
 }

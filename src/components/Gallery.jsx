@@ -3,8 +3,11 @@ import data from "../datas/logements.json";
 
 export default function Gallery() {
   const cards = data.map((item) => {
-    return <Card title={item.title} cover={item.cover} key={item.id} />;
+    return <Card 
+              title={item.title} 
+              cover={item.cover} 
+              key={item.id} 
+    />;
   });
-  /* console.log(cards); */
   return <ul className="gallery">{cards}</ul>;
 }
