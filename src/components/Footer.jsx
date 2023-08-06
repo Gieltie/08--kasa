@@ -1,5 +1,3 @@
-import "../sass/Footer.scss";
-import React from "react";
 import logo from "../images/logo-white.png";
 
 export default function Footer() {

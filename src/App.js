@@ -1,4 +1,3 @@
-import "./sass/App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ItemPage from "./pages/ItemPage";

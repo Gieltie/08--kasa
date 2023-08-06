@@ -3,8 +3,11 @@
 .card {
     background: linear-gradient(180deg, rgba(255,96,96,0.9),rgba(255,96,96,1) 90%);
     border-radius: 12px;
-    &__text {
-        color: $white;
-        align-items: baseline;
+    width: 340px;
+    height: 340px;
+    color: var(--white);
+    &__image {
+        height: 50%;
+        width: 100%;
     }
 }

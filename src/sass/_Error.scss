@@ -1,7 +1,7 @@
 @import "../sass/styles/variables";
 
 .error {
-    color: $first-color;
+    color: var(--first-color);
     text-align: center;
     &__code {
         font-size: 18rem;
@@ -13,7 +13,7 @@
     &__link {
         margin: 10rem;
         &--text {
-            color: $first-color;
+            color: var(--first-color);
             font-size: 1.125em;
         }
     }

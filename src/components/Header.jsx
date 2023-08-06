@@ -1,4 +1,3 @@
-import "../sass/Header.scss";
 import { NavLink } from "react-router-dom";
 import logo from "../images/logo-kasa.png";
 

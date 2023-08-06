@@ -1,4 +1,3 @@
-import "../sass/Error.scss";
 import { NavLink } from "react-router-dom";
 
 export default function Error() {
