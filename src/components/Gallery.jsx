@@ -6,8 +6,9 @@ export default function Gallery() {
     return <Card 
               title={item.title} 
               cover={item.cover} 
-              key={item.id} 
+              id={item.id}
+              key={item.id}
     />;
   });
-  return <ul className="gallery">{cards}</ul>;
+  return <section className="gallery">{cards}</section>;
 }

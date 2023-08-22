@@ -1,12 +1,12 @@
 import Header from "../components/Header";
-import Sheets from "../components/Sheets";
+import Sheet from "../components/Sheet";
 import Footer from "../components/Footer";
 
 export default function ItemPage() {
   return (
     <main className="content-wrap">
       <Header />
-      <Sheets />
+      <Sheet />
       <Footer />
     </main>
   );
