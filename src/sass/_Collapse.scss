@@ -2,14 +2,6 @@
     margin: 0 13rem;
 }
 
-.collapse__container--sheet {
-    display: flex;
-    justify-content: space-between;
-    & .collapse__content {
-        width: 582px;
-    }
-}
-
 .collapse {
     display: flex;
     flex-direction: column;
