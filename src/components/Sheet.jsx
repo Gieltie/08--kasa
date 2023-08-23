@@ -16,7 +16,7 @@ export default function Sheet() {
   //const tags = currentItem.tags
   //const pictures = currentItem.pictures
   //const cover = currentItem.discription
-  console.log(currentItem)
+  console.log(currentItem.index)
   return (
     <div>
       <Carousel logement={currentItem.pictures} />
