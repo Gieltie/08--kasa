@@ -7,9 +7,10 @@ export default function Card(props) {
       className="card"
     >
       <img 
+        className="card__image" 
         src={props.cover} 
-        alt={props.title} 
-        className="card__image" />
+        alt={props.title}
+      />
       <p className="card__text">
         {props.title}
       </p>

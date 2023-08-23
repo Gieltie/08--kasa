@@ -7,7 +7,7 @@ import image from "../images/img-banner.png"
 
 export default function HomePage() {
   return (
-    <main className="content-wrap">
+    <div className="content-wrap">
       <Header />
       <Banner
             image={image}
@@ -16,6 +16,6 @@ export default function HomePage() {
           />
       <Gallery />
       <Footer />
-    </main>
+    </div>
   );
 }

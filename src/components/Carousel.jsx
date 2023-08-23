@@ -15,12 +15,40 @@ export default function Carousel(props) {
         prevPicture === 0 ? props.logement.length - 1 : prevPicture - 1)
     }
 
+    if (props.logement.length === 1) {
+        return (
+            <section className="carousel">
+                <img 
+                    className="carousel__image"
+                    src={props.logement[currentPicture]} 
+                    alt={"Image(s): " + props.title}
+                />
+            </section>
+        );
+    }
+
     return (
-        <div className="carousel">
-            <img src={props.logement[currentPicture]} alt={props.id} className="carousel__image"/>
-            <img src={ArrowLeft} alt='Fléche gauche' onClick={previousPicture} className="carousel__arrow-left"></img>
-            <img src={ArrowRight} alt="Fléche droite " onClick={nextPicture} className="carousel__arrow-right"></img>
-            <div className="carousel__counter">{currentPicture + 1}/{props.logement.length}</div>
-        </div>
+        <section className="carousel">
+            <img 
+                className="carousel__image"
+                src={props.logement[currentPicture]} 
+                alt={"Image(s): " + props.title} 
+            />
+            <img 
+                className="carousel__arrow-left"
+                src={ArrowLeft} 
+                alt="Fléche gauche" 
+                onClick={previousPicture} 
+            />
+            <img 
+                className="carousel__arrow-right"
+                src={ArrowRight} 
+                alt="Fléche droite" 
+                onClick={nextPicture} 
+            />
+            <span className="carousel__counter">
+                {currentPicture + 1}/{props.logement.length}
+            </span>
+        </section>
         )
 }

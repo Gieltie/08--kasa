@@ -17,7 +17,7 @@ export default function AboutPage() {
     })
   
   return (
-    <main className="content-wrap">
+    <div className="content-wrap">
       <Header />
       <Banner
         image={image}
@@ -25,6 +25,6 @@ export default function AboutPage() {
       />
       {collapsePropos}
       <Footer />
-    </main>
+    </div>
   );
 }

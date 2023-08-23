@@ -4,7 +4,10 @@ import logo from "../images/logo-kasa.png";
 export default function Header() {
   return (
     <header className="header">
-      <img src={logo} alt="logo kasa" />
+      <img 
+        src={logo} 
+        alt="logo kasa"
+      />
       <nav className="header--nav">
         <NavLink
           to="/"

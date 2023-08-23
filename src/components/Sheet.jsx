@@ -12,32 +12,29 @@ export default function Sheet() {
   if (!currentItem){
     return <Navigate to="/error"/>
   }
-  //const equipements = 
-  //const tags = currentItem.tags
-  //const pictures = currentItem.pictures
-  //const cover = currentItem.discription
-  console.log(currentItem.index)
+
   return (
-    <div>
-      <Carousel logement={currentItem.pictures} />
+    <main className="sheet-wrap">
+      <Carousel 
+        logement={currentItem.pictures}
+        title={currentItem.title}
+      />
       
       <LocationInfo title={currentItem.title}/>
 
       <HostInfo />
 
-      <div>
-        <Collapse
-          label="Description">
+      <section className="collapse-wrap">
+        <Collapse label="Description">
           <p>{currentItem.description}</p>
         </Collapse>
         
-        <Collapse
-          label="Equipements">
+        <Collapse label="Equipements">
           <ul>{currentItem.equipments.map ((equipement, index) => (
             <li key={index}>{equipement}</li>
-          ))}</ul>
+            ))}</ul>
         </Collapse>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
