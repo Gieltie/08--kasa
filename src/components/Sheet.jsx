@@ -14,7 +14,7 @@ export default function Sheet() {
   }
   //const equipements = 
   //const tags = currentItem.tags
-  //const pictures = pictures
+  //const pictures = currentItem.pictures
   //const cover = currentItem.discription
   console.log(currentItem)
   return (
@@ -25,17 +25,19 @@ export default function Sheet() {
 
       <HostInfo />
 
-      <Collapse 
-        label="Description">
-        <p>{currentItem.description}</p>
-      </Collapse>
-      
-      <Collapse
-        label="Equipements">
-        <ul>{currentItem.equipments.map((equipement, index) => (
-          <li key={index}>{equipement}</li>
-        ))}</ul>
-      </Collapse>
+      <div>
+        <Collapse
+          label="Description">
+          <p>{currentItem.description}</p>
+        </Collapse>
+        
+        <Collapse
+          label="Equipements">
+          <ul>{currentItem.equipments.map ((equipement, index) => (
+            <li key={index}>{equipement}</li>
+          ))}</ul>
+        </Collapse>
+      </div>
     </div>
   )
 }

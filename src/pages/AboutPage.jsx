@@ -2,10 +2,17 @@ import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import Footer from "../components/Footer";
-
+import data from "../datas/aPropos.json"
 import image from "../images/img-banner2.png";
 
 export default function AboutPage() {
+  const propos = data.map((item) => {
+    return <Collapse
+                label={item.title}
+                description={item.discription}
+                />
+  })
+  
   return (
     <main className="content-wrap">
       <Header />
@@ -13,7 +20,8 @@ export default function AboutPage() {
         image={image}
         alt="panoramique de montagne"
       />
-      <Collapse label="Fiabilité">
+      {propos}
+      {/* <Collapse label="Fiabilité">
         <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont
         régulièrement vérifiées par nos équipes.</p>
       </Collapse>
@@ -30,7 +38,7 @@ export default function AboutPage() {
         correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
         locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
         également des ateliers sur la sécurité domestique pour nos hôtes.</p>
-      </Collapse>
+      </Collapse> */}
       <Footer />
     </main>
   );
