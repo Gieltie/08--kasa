@@ -24,7 +24,7 @@ export default function Sheet() {
 
       <HostInfo />
 
-      <section className="collapse-wrap">
+      <section className="collapse__container--sheet">
         <Collapse label="Description">
           <p>{currentItem.description}</p>
         </Collapse>

@@ -23,7 +23,9 @@ export default function AboutPage() {
         image={image}
         alt="panoramique de montagne"
       />
-      {collapsePropos}
+      <section className="collapse__container--about">
+        {collapsePropos}
+      </section>
       <Footer />
     </div>
   );
