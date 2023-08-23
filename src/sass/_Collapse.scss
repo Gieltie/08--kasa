@@ -1,103 +1,35 @@
-@import "./styles/variables";
-
-.about {
-    min-height: 60vh;
-}
-
-.about_collapses {
+.collapse {
     display: flex;
     flex-direction: column;
-    margin: 3rem 13rem;
-    gap: 3rem;
-    
-    /* @include desktop {
-        gap: 4rem;
-        margin: 3rem;
-    } */
-    
-    .collapse_description {
-        background-color: aqua;
+    margin: 2rem 13rem;
+    &__toggle {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--first-color);
+        color: var(--white);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.5rem;
+        padding: 10px 20px 10px 15px;
+        border: none;
+        border-radius: 5px;
+    }
+    &__content {
+        background-color: var(--second-color);
         color: var(--first-color);
-        
-        /* @include desktop {
-            width: 100%;
-        } */
+        overflow: hidden;
+        transition: height ease 0.9s;
+        &--child {
+            font-size: 1.125rem;
+            padding: 1rem;
+            line-height: 25.67px;
+        }
     }
 }
-
-.collapse_description {
-    position: relative;
-    margin-bottom: 30px;
-    margin-right: 10px;
-    
-    /* @include desktop {
-        width: 45%;
-    } */
-}
-
-.collapse_description_title {
-    background-color: var(--first-color);
-    width: 100%;
-    padding: 5px 0px 5px 10px;
-    border-radius: 5px;
-    color: var(--white);
-    font-size: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    font-size: 24px;
-    
-    /* @include desktop {
-        font-size: 18px;
-        padding: 10px 0px 10px 15px;
-    } */
-
-    i {
-        margin-right: 10px;
-    }
-}
-
-.collapse_description_content {
-    font-size: 13px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.8s ease;
-    margin-top: -3px;
-    background-color: var(--second-color);
-
-   /*  @include desktop {
-        font-size: 18px;
-    } */
-
-    p {
-        margin-top: 2rem;
-        margin-left: 10px;
-
-        /* @include desktop {
-            margin-top: 3rem;
-        } */
-    }
-
-    ul {
-        margin-top: 2rem;
-        list-style-type: none;
-        padding-left: 50px;
-        margin-left: 10px;
-
-       /*  @include desktop {
-            margin-top: 3rem;
-        } */
-    }
-
-
-}
-
-.rotate-chevron {
+.rotate {
     transform: rotate(180deg);
     transition: transform 0.8s ease-in-out;
 }
-
-.collapse_description.open .collapse_description_content {
-    max-height: 200px;
+.rotate-back {
+    transform: rotate(0deg);
+    transition: transform 0.8s ease-in-out;
 }

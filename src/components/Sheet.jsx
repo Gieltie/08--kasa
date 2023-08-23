@@ -1,8 +1,9 @@
 import { Navigate, useParams } from "react-router-dom"
 import Carousel from "./Carousel"
 import Collapse from "./Collapse"
-import Star from "./StarIcon"
 import data from "../datas/logements.json"
+import HostInfo from "./HostInfo"
+import LocationInfo from "./LocationInfo"
 
 export default function Sheet() {
   const { id } = useParams()
@@ -15,13 +16,26 @@ export default function Sheet() {
   //const tags = currentItem.tags
   //const pictures = pictures
   //const cover = currentItem.discription
+  console.log(currentItem)
   return (
     <div>
-      <Carousel logement={currentItem.pictures}/>
-      <Collapse title="Description" content={currentItem.description}/>
-      <Collapse title="Equipements" content={currentItem.equipments}/>
-      <Star />
-      <h1>{currentItem.equipments}</h1>
+      <Carousel logement={currentItem.pictures} />
+      
+      <LocationInfo title={currentItem.title}/>
+
+      <HostInfo />
+
+      <Collapse 
+        label="Description">
+        <p>{currentItem.description}</p>
+      </Collapse>
+      
+      <Collapse
+        label="Equipements">
+        <ul>{currentItem.equipments.map((equipement, index) => (
+          <li key={index}>{equipement}</li>
+        ))}</ul>
+      </Collapse>
     </div>
   )
 }

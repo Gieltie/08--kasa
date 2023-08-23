@@ -1,32 +1,25 @@
-import { useState } from "react";
+import React from "react";
 
 export default function Collapse(props) {
-  const [isContentVisible, setIsContentVisible] = useState(false);
+  const [open, setOpen] = React.useState(false);
 
-  const handleToggleContent = () => {
-    setIsContentVisible((prevIsVisible) => !prevIsVisible);
+  const handleToggle = () => {
+    setOpen(!open);
   };
 
+  const contentRef = React.useRef();
+/* if (contentRef.current) console.log(contentRef.current.scrollHeight); */
+
   return (
-    <div className={`collapse_description ${isContentVisible ? "open" : ""}`}>
-      <div className="collapse_description_title" onClick={handleToggleContent}>
-        <span>{props.title}</span>
-        <i
-          className={`fa-solid fa-chevron-up ${
-            isContentVisible ? "rotate-chevron" : ""
-          }`}
-        ></i>
-      </div>
-      <div className="collapse_description_content">
-        {Array.isArray(props.content) ? (
-          <ul>
-            {props.content.map((equipment, index) => (
-              <li key={index}>{equipment}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>{props.content}</p>
-        )}
+    <div className="collapse">
+      <button className="collapse__toggle" onClick={handleToggle}>
+        {props.label}
+        <i className={`fa-solid fa-chevron-up ${open ? "rotate" : "rotate-back"}`}></i>
+      </button>
+      <div className="collapse__content"
+          ref={contentRef}
+          style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}>
+        <div className="collapse__content--child">{props.children}</div>
       </div>
     </div>
   );
