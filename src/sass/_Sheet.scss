@@ -5,6 +5,15 @@
 .collapse__container--sheet {
     display: flex;
     justify-content: space-between;
+    & .collapse__toggle {
+        display: flex;
+        align-items: center;
+        height: 52px;
+        border-radius: 10px;
+        &--title {
+            font-size: 1.125rem;
+        }
+    }
     & .collapse__content {
         width: 582px;
     }

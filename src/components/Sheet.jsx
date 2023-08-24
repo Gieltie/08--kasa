@@ -1,9 +1,8 @@
 import { Navigate, useParams } from "react-router-dom"
-import Carousel from "./Carousel"
-import Collapse from "./Collapse"
 import data from "../datas/logements.json"
-import HostInfo from "./HostInfo"
-import LocationInfo from "./LocationInfo"
+import Carousel from "./Carousel"
+import SheetInfo from "./SheetInfo"
+import Collapse from "./Collapse"
 
 export default function Sheet() {
   const { id } = useParams()
@@ -20,9 +19,15 @@ export default function Sheet() {
         title={currentItem.title}
       />
       
-      <LocationInfo title={currentItem.title}/>
-
-      <HostInfo />
+      <SheetInfo 
+        title={currentItem.title} 
+        description={currentItem.description} 
+        location={currentItem.location} 
+        name={currentItem.host.name} 
+        tags={currentItem.tags} 
+        picture={currentItem.host.picture} 
+        rating={currentItem.rating}
+      />
 
       <section className="collapse__container--sheet">
         <Collapse label="Description">
@@ -30,9 +35,11 @@ export default function Sheet() {
         </Collapse>
         
         <Collapse label="Equipements">
-          <ul>{currentItem.equipments.map ((equipement, index) => (
-            <li key={index}>{equipement}</li>
-            ))}</ul>
+          <ul>
+            {currentItem.equipments.map((equipement, index) => (
+              <li key={index}>{equipement}</li>
+            ))}
+          </ul>
         </Collapse>
       </section>
     </main>

@@ -33,7 +33,7 @@
     } 
 }
 .rotate {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
     transition: transform 0.8s ease-in-out;
 }
 .rotate-back {

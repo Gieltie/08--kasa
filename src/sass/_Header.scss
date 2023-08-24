@@ -1,4 +1,5 @@
 @import "./styles/variables";
+@import "./styles/mixins";
 
 .header {
     display: flex;
@@ -7,11 +8,17 @@
     height: 4.25em;
     margin: 3em 6em;
     max-width: 1440px;
+    @include mobile {
+
+    }
     .link {
         color: var(--first-color);
         text-decoration: none;
         font-size: 1.5em;
         padding-left: 2em;
+        @include mobile {
+            font-size: 0.75rem;
+        }
     }
     .active {
         text-decoration: underline;

@@ -14,7 +14,7 @@ export default function Collapse(props) {
         className="collapse__toggle" 
         onClick={handleToggle}
       >
-        {props.label}
+        <span className="collapse__toggle--title">{props.label}</span>
         <i className={`fa-solid fa-chevron-up ${open ? "rotate" : "rotate-back"}`}></i>
       </button>
       <div 
