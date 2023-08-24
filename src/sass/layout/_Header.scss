@@ -1,0 +1,31 @@
+@use '../util/' as u;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4.25em;
+    margin: 3em 6em;
+    @include u.breakpoint(small) {
+        margin: 2rem;
+    }
+    &__logo {
+        @include u.breakpoint(small) {
+            width: 145px;
+        }
+    }
+    &__navigation {
+        &--link {
+            color: var(--first-color);
+            text-decoration: none;
+            font-size: 1.5em;
+            padding-left: 2em;
+            @include u.breakpoint(small) {
+                font-size: 0.75rem;
+            }
+        }
+    }
+    .active {
+        text-decoration: underline;
+    }
+}

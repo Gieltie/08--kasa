@@ -1,4 +1,4 @@
-@import "./styles/variables";
+@use '../util/' as u;
 
 .gallery {
     display: grid;
@@ -10,12 +10,7 @@
     padding: 3rem;
     align-items: center;
     justify-items: center;
+    @include u.breakpoint(small) {
+        margin: 1rem
+    }
 }
-
-/* display: flex;
-flex-wrap: wrap;
-background-color: var(--second-color);
-border-radius: 1.5rem; 
-margin: 3rem 6rem;
-padding: 3rem;
-gap: 3rem; */

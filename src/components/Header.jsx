@@ -5,19 +5,20 @@ export default function Header() {
   return (
     <header className="header">
       <img 
+        className="header__logo"
         src={logo} 
         alt="logo kasa"
       />
-      <nav className="header--nav">
+      <nav className="header__navigation">
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "link active" : "link")}
+          className={({ isActive }) => (isActive ? "header__navigation--link active" : "header__navigation--link")}
         >
           Accueil
         </NavLink>
         <NavLink
           to="/about"
-          className={({ isActive }) => (isActive ? "link active" : "link")}
+          className={({ isActive }) => (isActive ? "header__navigation--link active" : "header__navigation--link")}
         >
           A Propos
         </NavLink>

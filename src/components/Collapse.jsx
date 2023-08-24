@@ -11,6 +11,7 @@ export default function Collapse(props) {
   return (
     <article className="collapse">
       <button 
+        key={props.key}
         className="collapse__toggle" 
         onClick={handleToggle}
       >
@@ -20,8 +21,7 @@ export default function Collapse(props) {
       <div 
         className="collapse__content"
         ref={contentRef}
-        style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}
-      >
+        style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}>
         <div className="collapse__content--child">
             {props.children}
         </div>

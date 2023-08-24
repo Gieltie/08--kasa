@@ -1,0 +1,20 @@
+/*----- Generale -----*/
+* {
+    box-sizing: border-box;
+}
+
+body  {
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1440px;
+    min-width: 375px;
+    margin: auto;
+}
+
+#root {
+    position: relative;
+    min-height: 100vh;
+  }
+
+.content-wrap {
+    padding-bottom: 13rem;
+  }

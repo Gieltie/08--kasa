@@ -1,4 +1,4 @@
-export default function LocationInfo(props) {
+export default function SheetInfo(props) {
     return (
         <div className='description'>
             <div className='description__title'>
@@ -14,7 +14,7 @@ export default function LocationInfo(props) {
             <div className='description__host'>
                 <div className='description__host--img'>
                     <p>{props.name}</p>
-                    <img src={props.picture} alt="Photo de profil" />
+                    <img src={props.picture} alt={props.name} />
                 </div>
                 <ul>
                     {[1, 2, 3, 4, 5].map((number, index) => (
