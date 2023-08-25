@@ -1,27 +1,27 @@
-@use '../util/' as u;
+@import "../util";
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 4.25em;
-    margin: 3em 6em;
-    @include u.breakpoint(small) {
-        margin: 2rem;
+    margin: 1rem 2rem;
+    @include md {
+        margin: 3rem 6rem;
     }
     &__logo {
-        @include u.breakpoint(small) {
-            width: 145px;
+        width: 9rem;
+        @include md {
+            width: 13.125rem;
         }
     }
     &__navigation {
         &--link {
             color: var(--first-color);
             text-decoration: none;
-            font-size: 1.5em;
-            padding-left: 2em;
-            @include u.breakpoint(small) {
-                font-size: 0.75rem;
+            font-size: 0.75rem;
+            padding-left: 2rem;
+            @include md {
+                font-size: 1.5rem;
             }
         }
     }

@@ -1,16 +1,17 @@
-@use '../util/' as u;
+@import "../util";
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
-    gap: 3rem;
-    background-color: var(--second-color);
-    border-radius: 1.5rem; 
-    margin: 3rem 6rem;
-    padding: 3rem;
+    gap: 1rem; 
+    margin: 1rem;
     align-items: center;
     justify-items: center;
-    @include u.breakpoint(small) {
-        margin: 1rem
+    @include md {
+        padding: 3rem;
+        border-radius: 1.5rem;
+        background-color: var(--second-color);
+        margin: 3rem 6rem;
+        gap: 3rem;
     }
 }

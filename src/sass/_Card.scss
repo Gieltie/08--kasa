@@ -1,22 +1,17 @@
-@import '../util';
+@import "./styles/variables";
 
 .card {
     position: relative;
-    height: 16rem;
-    width: 100%;
+    border-radius: 1.5rem;
+    height: 22rem;
+    width: 22rem;
     color: var(--white);
-    @include md {
-        height: 22rem;
-    }
     &__image {
         object-fit: cover;
         height: 100%;
         width: 100%;
-        border-radius: 0.625rem;
+        border-radius: 1.5rem;
         filter: brightness(0.7);
-        @include md {
-            border-radius: 1.5rem;
-        }
     }
     &__text {
         width: 60%;
