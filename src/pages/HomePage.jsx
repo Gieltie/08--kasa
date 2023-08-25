@@ -7,7 +7,7 @@ import image from "../images/img-banner.png"
 
 export default function HomePage() {
   return (
-    <div className="content-wrap">
+    <div className="content--wrap">
       <Header />
       <Banner
             image={image}

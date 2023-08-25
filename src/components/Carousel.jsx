@@ -1,6 +1,4 @@
 import React from "react"
-import ArrowLeft from "../images/arrow_left.png"
-import ArrowRight from "../images/arrow_right.png"
 
 export default function Carousel(props) {
     const [currentPicture, setCurrentPicture] = React.useState(0)
@@ -34,17 +32,15 @@ export default function Carousel(props) {
                 src={props.logement[currentPicture]} 
                 alt={"Image(s): " + props.title} 
             />
-            <img 
-                className="carousel__arrow-left"
-                src={ArrowLeft} 
+            <i 
+                className="fa-solid fa-chevron-left fa-xl carousel__arrow left"
                 alt="Fléche gauche" 
-                onClick={previousPicture} 
+                onClick={previousPicture}
             />
-            <img 
-                className="carousel__arrow-right"
-                src={ArrowRight} 
+            <i 
+                className="fa-solid fa-chevron-right fa-xl carousel__arrow right"
                 alt="Fléche droite" 
-                onClick={nextPicture} 
+                onClick={nextPicture}
             />
             <span className="carousel__counter">
                 {currentPicture + 1}/{props.logement.length}

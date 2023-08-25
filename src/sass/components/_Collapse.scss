@@ -1,3 +1,5 @@
+@import '../util/';
+
 .collapse__container--about {
     margin: 0 13rem;
 }
@@ -8,21 +10,22 @@
      &__toggle {
         display: flex;
         justify-content: space-between;
-        background-color: var(--first-color);
-        color: var(--white);
+        background-color: $first-color;
+        color: $white;
         font-family: 'Montserrat', sans-serif;
         font-size: 1.5rem;
         padding: 10px 20px 10px 15px;
         border: none;
         border-radius: 0.3rem;
+        width: 100%;
     }
     &__content {
-        background-color: var(--second-color);
+        background-color: $second-color;
         overflow: hidden;
         transition: height ease 0.9s;
         margin-bottom: 2rem;
         &--child {
-            color: var(--first-color);
+            color: $first-color;
             font-size: 1.125rem;
             padding: 1rem;
             line-height: 25.67px;
@@ -30,7 +33,7 @@
                 list-style: none;
             }
         }
-    } 
+    }
 }
 .rotate {
     transform: rotate(-180deg);

@@ -1,4 +1,4 @@
-@import '../util';
+@import '../util/';
 
 .banner {
     position: relative;
@@ -19,7 +19,7 @@
     }
     &__text {
         position: absolute;
-        color: var(--white);
+        color: $white;
         top: 50%;
         left: 40%;
         transform: translate(-50%, -50%);

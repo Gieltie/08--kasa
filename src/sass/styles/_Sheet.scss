@@ -1,10 +1,19 @@
-.sheet-wrap {
-    margin: 0 6rem;
+@import '../util';
+
+.sheet--wrap {
+    margin: 1.2rem;
+    @include md {
+        margin: 3rem;
+    }
 }
 
 .collapse__container--sheet {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    @include md {
+        flex-direction: row;
+        justify-content: space-between;
+    }
     & .collapse__toggle {
         display: flex;
         align-items: center;
@@ -13,8 +22,5 @@
         &--title {
             font-size: 1.125rem;
         }
-    }
-    & .collapse__content {
-        width: 582px;
     }
 }

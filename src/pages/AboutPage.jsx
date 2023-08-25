@@ -18,7 +18,7 @@ export default function AboutPage() {
     })
   
   return (
-    <div className="content-wrap">
+    <div className="content--wrap">
       <Header />
       <Banner
         image={image}

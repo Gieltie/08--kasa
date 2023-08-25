@@ -1,7 +1,7 @@
 import { Navigate, useParams } from "react-router-dom"
 import data from "../datas/logements.json"
 import Carousel from "./Carousel"
-import SheetInfo from "./SheetInfo"
+//import SheetInfo from "./SheetInfo"
 import Collapse from "./Collapse"
 
 export default function Sheet() {
@@ -13,13 +13,13 @@ export default function Sheet() {
   }
 
   return (
-    <main className="sheet-wrap">
+    <main className="sheet--wrap">
       <Carousel 
         logement={currentItem.pictures}
         title={currentItem.title}
       />
       
-      <SheetInfo 
+      {/* <SheetInfo 
         title={currentItem.title} 
         description={currentItem.description} 
         location={currentItem.location} 
@@ -27,7 +27,7 @@ export default function Sheet() {
         tags={currentItem.tags} 
         picture={currentItem.host.picture} 
         rating={currentItem.rating}
-      />
+      /> */}
 
       <section className="collapse__container--sheet">
         <Collapse label="Description">
