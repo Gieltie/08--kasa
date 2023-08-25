@@ -1,45 +1,63 @@
 @import '../util/';
 
 .collapse__container--about {
-    margin: 0 13rem;
+    margin: 0 1rem;
+    @include md {
+        margin: 0 13rem;
+    }
 }
 
 .collapse {
     display: flex;
     flex-direction: column;
-     &__toggle {
+    font-family: 'Montserrat', sans-serif;
+    &__button {
         display: flex;
         justify-content: space-between;
         background-color: $first-color;
-        color: $white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
-        padding: 10px 20px 10px 15px;
         border: none;
+        font-size: 0.8rem;
+        padding: 10px;
+        color: $white;
         border-radius: 0.3rem;
-        width: 100%;
+        @include md {
+            padding: 15px;
+            font-size: 1.5rem;
+        }
+    }
+    & i {
+       font-size: 1rem;
+       @include md {
+            font-size: 1.5rem;
+       }
+    }
+    .rotate {
+        transform: rotate(-180deg);
+        transition: transform 0.8s ease-in-out;
+    }
+    .rotate-back {
+        transform: rotate(0deg);
+        transition: transform 0.8s ease-in-out;
     }
     &__content {
         background-color: $second-color;
         overflow: hidden;
         transition: height ease 0.9s;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 0.3rem;
+        @include md {
+            margin-bottom: 2rem;
+        }
         &--child {
             color: $first-color;
-            font-size: 1.125rem;
+            font-size: 0.75rem;
             padding: 1rem;
-            line-height: 25.67px;
-            li {
-                list-style: none;
+            line-height: 1.06rem;
+            @include md {
+                font-size: 1.125rem;
+                line-height: 1.60rem;
             }
+            
         }
     }
-}
-.rotate {
-    transform: rotate(-180deg);
-    transition: transform 0.8s ease-in-out;
-}
-.rotate-back {
-    transform: rotate(0deg);
-    transition: transform 0.8s ease-in-out;
 }

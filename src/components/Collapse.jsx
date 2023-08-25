@@ -12,10 +12,10 @@ export default function Collapse(props) {
     <article className="collapse">
       <button 
         key={props.key}
-        className="collapse__toggle" 
+        className="collapse__button" 
         onClick={handleToggle}
       >
-        <span className="collapse__toggle--title">{props.label}</span>
+        <span>{props.label}</span>
         <i className={`fa-solid fa-chevron-up ${open ? "rotate" : "rotate-back"}`}></i>
       </button>
       <div 

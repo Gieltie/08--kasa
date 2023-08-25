@@ -10,7 +10,7 @@
     @include md {
         padding: 3rem;
         border-radius: 1.5rem;
-        background-color: var(--second-color);
+        background-color: $second-color;
         margin: 3rem 6rem;
         gap: 3rem;
     }

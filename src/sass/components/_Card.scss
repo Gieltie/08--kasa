@@ -4,9 +4,9 @@
     position: relative;
     height: 16rem;
     width: 100%;
-    color: var(--white);
+    color: $white;
     @include md {
-        height: 22rem;
+        height: 21.25rem;
     }
     &__image {
         object-fit: cover;
@@ -14,14 +14,11 @@
         width: 100%;
         border-radius: 0.625rem;
         filter: brightness(0.7);
-        @include md {
-            border-radius: 1.5rem;
-        }
     }
     &__text {
+        position: absolute;
         width: 60%;
         font-size: 1.125rem;
-        position: absolute;
         bottom: 1rem;
         left: 1rem;
     }
