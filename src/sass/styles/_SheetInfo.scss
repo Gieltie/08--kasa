@@ -71,6 +71,7 @@
                 text-align: right;
                 font-size: 0.75rem;
                 @include md {
+                    width: 5.5rem;
                     font-size: 18px;
                 }
             }
