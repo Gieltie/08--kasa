@@ -1,9 +1,18 @@
 @import '../util/';
 
-.collapse__container--about {
-    margin: 0 1rem;
-    @include md {
-        margin: 0 13rem;
+.collapse__container {
+    &--about {
+        margin: 0 1rem;
+        @include md {
+            margin: 0 13rem;
+        }
+    }
+    &--sheet {
+        display: grid;
+        @include md {
+            grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+            gap: 4rem;
+        }
     }
 }
 
@@ -15,14 +24,17 @@
         display: flex;
         justify-content: space-between;
         background-color: $first-color;
+        color: $white;
         border: none;
+        border-radius: 0.3rem;
+        font-family: 'Montserrat', sans-serif;
         font-size: 0.8rem;
         padding: 10px;
-        color: $white;
-        border-radius: 0.3rem;
+        z-index: 1;
         @include md {
             padding: 15px;
-            font-size: 1.5rem;
+            border-radius: 0.625rem;
+            font-size: 1.125rem;
         }
     }
     & i {
@@ -40,13 +52,16 @@
         transition: transform 0.8s ease-in-out;
     }
     &__content {
-        background-color: $second-color;
+        background-color:$second-color;
         overflow: hidden;
         transition: height ease 0.9s;
+        margin-top: -3px;
         margin-bottom: 1.5rem;
-        border-radius: 0.3rem;
+        border-radius: 0 0 0.3rem 0.3rem;
+        z-index: 0;
         @include md {
             margin-bottom: 2rem;
+            border-radius: 0 0 0.625rem 0.625rem;
         }
         &--child {
             color: $first-color;

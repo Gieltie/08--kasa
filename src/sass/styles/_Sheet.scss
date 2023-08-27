@@ -6,21 +6,3 @@
         margin: 3rem;
     }
 }
-
-.collapse__container--sheet {
-    display: flex;
-    flex-direction: column;
-    @include md {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    & .collapse__toggle {
-        display: flex;
-        align-items: center;
-        height: 52px;
-        border-radius: 0.625rem;
-        &--title {
-            font-size: 1.125rem;
-        }
-    }
-}
