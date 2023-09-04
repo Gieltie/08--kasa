@@ -1,7 +1,7 @@
-import React from "react"
+import { useState } from "react"
 
 export default function Carousel(props) {
-    const [currentPicture, setCurrentPicture] = React.useState(0)
+    const [currentPicture, setCurrentPicture] = useState(0)
 
     function nextPicture() {
         setCurrentPicture(prevPicture => 
