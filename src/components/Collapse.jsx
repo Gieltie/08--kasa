@@ -3,7 +3,6 @@ import React from "react";
 export default function Collapse(props) {
   const [open, setOpen] = React.useState(false);
   const contentRef = React.useRef();
-  
   function handleToggle() {
     setOpen(!open);
   };
@@ -11,7 +10,7 @@ export default function Collapse(props) {
   return (
     <article className="collapse">
       <button 
-        key={props.key}
+        key={props.id}
         className="collapse__button" 
         onClick={handleToggle}
       >
