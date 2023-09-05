@@ -28,7 +28,10 @@
         @include md {
             left: 50%;
             font-size: 48px;
-            width: max-content;
+            width: 500px;
+        }
+        @include lg {
+            width: 750px;
         }
     }
 }
