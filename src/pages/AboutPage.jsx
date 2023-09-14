@@ -9,7 +9,7 @@ export default function AboutPage() {
   const collapsePropos = data.map((item) => {
     return (
       <Collapse 
-        id={item.id}
+        key={item.id}
         label={item.title}
       >
         <p>{item.discription}</p>
